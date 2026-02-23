@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Campaign Optimizer | Machine Learning Case Study</title>
+
+<style>
+:root {
+  --primary: #0f172a;
+  --accent: #2563eb;
+  --light: #f8fafc;
+  --gray: #64748b;
+  --border: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--light);
+  color: var(--primary);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.hero {
+  background: var(--primary);
+  color: white;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  max-width: 700px;
+}
+
+.badges {
+  margin-top: 20px;
+}
+
+.badges span {
+  background: #1e293b;
+  padding: 6px 12px;
+  margin-right: 8px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+section {
+  margin-top: 60px;
+}
+
+h2 {
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.metric-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.metric-card h3 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 1.8rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+th {
+  background: #f1f5f9;
+}
+
+.highlight {
+  background: #e0f2fe;
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+footer {
+  margin-top: 80px;
+  padding: 40px;
+  text-align: center;
+  background: var(--primary);
+  color: white;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+  <div class="container">
+    <h1>Financial Campaign Optimizer</h1>
+    <p>
+      End-to-end machine learning case study applying the CRISP-DM framework 
+      to optimize telemarketing targeting using the UCI Bank Marketing dataset 
+      (41,188 records, 2008-2010).
+    </p>
+    <div class="badges">
+      <span>Binary Classification</span>
+      <span>Imbalanced Data</span>
+      <span>Model Comparison</span>
+      <span>Business Impact Focused</span>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+<section>
+<h2>Executive Summary</h2>
+<p>
+A Portuguese bank achieved only ~11% conversion across 41,000+ marketing calls. 
+This project builds predictive models to reduce wasted outreach while maintaining 
+strong recall of high-potential customers.
+</p>
+
+<div class="metrics-grid">
+  <div class="metric-card">
+    <h3>41,188</h3>
+    <p>Total Campaign Records</p>
+  </div>
+  <div class="metric-card">
+    <h3>11.3%</h3>
+    <p>Baseline Conversion Rate</p>
+  </div>
+  <div class="metric-card">
+    <h3>0.519</h3>
+    <p>Best F1 Score (Tuned Decision Tree)</p>
+  </div>
+  <div class="metric-card">
+    <h3>0.798</h3>
+    <p>Best ROC-AUC</p>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>Business Objective</h2>
+<ul>
+<li>Reduce unnecessary telemarketing calls by 20–30%</li>
+<li>Increase subscriber targeting precision</li>
+<li>Deploy interpretable model for stakeholder trust</li>
+</ul>
+</section>
+
+<section>
+<h2>Modeling Approach</h2>
+<p>
+Four supervised classifiers were benchmarked:
+</p>
+<ul>
+<li>Logistic Regression</li>
+<li>K-Nearest Neighbors</li>
+<li>Decision Tree</li>
+<li>Support Vector Machine (Linear)</li>
+</ul>
+
+<p>
+Evaluation emphasized F1 score, ROC-AUC, Precision, Recall, and Balanced Accuracy 
+due to 11% class imbalance.
+</p>
+</section>
+
+<section>
+<h2>Model Performance (Final Comparison)</h2>
+
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>F1</th>
+<th>ROC-AUC</th>
+<th>Precision</th>
+<th>Recall</th>
+<th>Fit Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Logistic Regression (Tuned)</td>
+<td>0.461</td>
+<td>0.799</td>
+<td>0.359</td>
+<td>0.644</td>
+<td>1.52s</td>
+</tr>
+<tr class="highlight">
+<td>Decision Tree (Tuned)</td>
+<td>0.519</td>
+<td>0.798</td>
+<td>0.462</td>
+<td>0.593</td>
+<td>0.13s</td>
+</tr>
+<tr>
+<td>SVM Linear (Tuned)</td>
+<td>0.467</td>
+<td>0.792</td>
+<td>0.368</td>
+<td>0.639</td>
+<td>17.4s</td>
+</tr>
+<tr>
+<td>KNN (Tuned)</td>
+<td>0.388</td>
+<td>0.752</td>
+<td>0.560</td>
+<td>0.297</td>
+<td>0.003s</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<strong>Recommendation:</strong> Tuned Decision Tree offers the best trade-off 
+between recall and precision while remaining computationally efficient and interpretable.
+</p>
+</section>
+
+<section>
+<h2>Key Insights</h2>
+<ul>
+<li>Previous campaign success is the strongest predictive signal (~65% conversion when prior success)</li>
+<li>Students and retirees convert at higher rates</li>
+<li>Month of contact significantly impacts conversion probability</li>
+<li>Macroeconomic indicators exhibit strong correlation clusters</li>
+</ul>
+
+<img src="plots/06_model_comparison_final_all_model_metrics_comparison.png" alt="Model comparison">
+</section>
+
+<section>
+<h2>Deployment Considerations</h2>
+<ul>
+<li>Use class-weighted training to handle imbalance</li>
+<li>Monitor precision/recall trade-offs monthly</li>
+<li>Re-train quarterly to adjust for macroeconomic shifts</li>
+<li>Integrate scoring into CRM pre-call filtering workflow</li>
+</ul>
+</section>
+
+<section>
+<h2>Technical Stack</h2>
+<ul>
+<li>Python</li>
+<li>pandas</li>
+<li>scikit-learn</li>
+<li>Matplotlib / Seaborn</li>
+<li>Jupyter Notebook</li>
+</ul>
+</section>
+
+<section>
+  <h2>Project Implementation</h2>
+  <p>
+    The full codebase for this project is open-source and available on GitHub:
+  </p>
+  <p>
+    <a href="https://github.com/VinnyBabuManjaly/bank-deposit-subscription-predictor" target="_blank">
+      https://github.com/VinnyBabuManjaly/bank-deposit-subscription-predictor
+    </a>
+  </p>
+  <p>
+    The repository includes:
+  </p>
+  <ul>
+    <li>Jupyter notebooks with full modeling and analysis</li>
+    <li>Dataset and cleaning scripts</li>
+    <li>Trained model artifacts</li>
+    <li>Plots and visualizations</li>
+    <li>Results tables and evaluation metrics</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+<p>
+© 2026 | Financial Campaign Optimizer | Machine Learning Portfolio Case Study
+</p>
+</footer>
+
+</body>
+</html>
