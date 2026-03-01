@@ -655,6 +655,8 @@ A structured monitoring and maintenance plan ensures the deployed model stays ac
 
 ### 6.3 Final Report
 
+Report for the project can be found at [FinancialCampaignOptimizer Report](https://vinnybabumanjaly.github.io/FinancialCampaignOptimizer/)
+
 ### 6.4 Review project
 
 The purpose of this task is to reflect on the project’s execution, identifying successes, challenges, and lessons learned. This assessment helps improve future data mining initiatives and guides better decision-making.
