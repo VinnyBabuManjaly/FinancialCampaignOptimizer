@@ -43,6 +43,8 @@ Through business understanding, data preparation, modeling, evaluation, and depl
 
 The full analysis and implementation is available in the **[Jupyter Notebook: Financial_Campaign_Optimizer.ipynb](./Financial_Campaign_Optimizer.ipynb)**, which delivers actionable insights for targeted banking outreach.
 
+The final report is available at **[Financial Campaign Optimizer Report](https://vinnybabumanjaly.github.io/FinancialCampaignOptimizer/)**.
+
 ## 1. Business Understanding
 
 ### 1.1 Business Objectives
